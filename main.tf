@@ -17,7 +17,7 @@ provider "yandex" {
 }
 
 resource "yandex_vpc_network" "foo" {
-  network_id = "test"
+  name = "test"
 
 }
 
