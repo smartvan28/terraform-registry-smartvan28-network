@@ -16,7 +16,10 @@ provider "yandex" {
   zone      = "ru-central1-a"
 }
 
-resource "yandex_vpc_network" "foo" {}
+resource "yandex_vpc_network" "foo" {
+  network_id = "test"
+
+}
 
 resource "yandex_vpc_subnet" "foo" {
   v4_cidr_blocks = ["10.2.0.0/16"]
