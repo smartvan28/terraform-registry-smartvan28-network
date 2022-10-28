@@ -27,3 +27,15 @@ resource "yandex_vpc_subnet" "foo" {
   network_id = "${yandex_vpc_network.foo.id}"
   name = "test_subnet"
 }
+
+resource "yandex_dns_zone" "zone1" {
+  name        = "my-public-zone"
+  description = "Test public zone"
+
+  labels = {
+    label1 = "test-public"
+  }
+
+  zone    = "docker.smartvan.space."
+  public  = true
+}
